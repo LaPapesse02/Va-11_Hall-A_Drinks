@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "va11halla_drinks",
+  "version": "${version}",
+
+  "name": "Va-11 Hall-A Drinks",
+  "description": "Drinks from the game Va-11 Hall-A",
+  "authors": [
+    "LaPapesse02 (La_Papesse in-game)"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/va11halla_drinks/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+        "com.github.lapapesse02.va11halla_drinks.ModStarter"
+    ]
+  },
+  "mixins": [
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "itemGroup.va11halla_drinks.group": "Va-11 Hall-A Drinks",
+
+
+    "tooltip.va11halla.adelhyde": "Sweetness level",
+    "tooltip.va11halla.powdered_delta": "Sourness level",
+    "tooltip.va11halla.bronson_extract": "Bitterness level",
+    "tooltip.va11halla.flanergide": "Spiciness level",
+    "tooltip.va11halla.karmotrine": "Alcohol level",
+
+    "tooltip.va11halla.size": "Size",
+    "tooltip.va11halla.normal": "Normal",
+    "tooltip.va11halla.big": "Big",
+
+
+    "item.va11halla_drinks.adelhyde": "Adelhyde",
+    "item.va11halla_drinks.powdered_delta": "Powdered Delta",
+    "item.va11halla_drinks.bronson_extract": "Bronson Extract",
+    "item.va11halla_drinks.flanergide": "Flanergide",
+    "item.va11halla_drinks.karmotrine": "Karmotrine"
+}
