@@ -51,25 +51,8 @@ public class BaseDrinkItem extends Item {
         }
         this.size = sum >= 10 ? 2 : 1;
     }
-
-
-    public void setIngredientsFromTag (ItemStack stack) {
-        if (stack.getTag() != null) {
-            CompoundTag tag = stack.getTag();
-
-            this.ingredients = new int[] {
-                    tag.getInt("adelhyde"),
-                    tag.getInt("powdered_delta"),
-                    tag.getInt("bronson_extract"),
-                    tag.getInt("flanergide"),
-                    tag.getInt("karmotrine")
-            };
-
-            this.size = tag.getInt("size");
-        }
-    }
-
-
+    
+    
     @Override
     public UseAction getUseAction(ItemStack stack) {
         return UseAction.DRINK;
@@ -81,8 +64,8 @@ public class BaseDrinkItem extends Item {
         return 32;
     }
 
+    
     @Override
-
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         if (user instanceof PlayerEntity){
             if ( !((( PlayerEntity ) user).isCreative()) ) {
@@ -96,7 +79,7 @@ public class BaseDrinkItem extends Item {
         if (!world.isClient()) {
             for (int i = 0; i < this.ingredients.length; i++) {
                 if (this.ingredients[i] == 0) {
-                    // doesn't try to give an effect if the duration would be 0
+                    // doesn't try to give an effect if the duration is 0
                     continue;
                 }
                 user.addStatusEffect(new StatusEffectInstance(
@@ -134,10 +117,10 @@ public class BaseDrinkItem extends Item {
                 + new TranslatableText(
                     String.format("tooltip.va11halla.%s", ingredientNames[i])
                 ).getString()
-                + String.format(" : %s%d", colorCodes[i],this.ingredients[i])
+                + String.format(" : %s%d", colorCodes[i], this.ingredients[i])
             ));
         }
-        // leaves space between ingredients and namespace
+        // leaves space between ingredients and identifier
         tooltip.add(new LiteralText(""));
     }
 
