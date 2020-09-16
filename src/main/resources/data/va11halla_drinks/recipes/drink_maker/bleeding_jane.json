@@ -1,0 +1,14 @@
+{
+    "levels": {
+        "adelhyde": 0,
+        "powdered_delta": 1,
+        "bronson_extract": 3,
+        "flanergide": 3,
+        "karmotrine": 0
+    },
+    "isAged": false,
+    "isBlended": true,
+    "isOnTheRocks": false,
+    "outputItem": "va11halla_drinks:bleeding_jane",
+    "type": "va11halla_drinks:drink"
+}

@@ -1,0 +1,74 @@
+{
+    "credit": "Made with Blockbench",
+    "parent": "block/cube_all",
+    "textures": {
+        "0": "va11halla_drinks:block/drink_maker_stand",
+        "1": "va11halla_drinks:block/drink_maker_body",
+        "particle": "va11halla_drinks:block/drink_maker_stand"
+    },
+    "elements": [
+        {
+            "name": "screen",
+            "from": [2.5, -0.5, 7],
+            "to": [13.5, 6.5, 8],
+            "rotation": {"angle": -22.5, "axis": "x", "origin": [8.5, 2.5, 7.5]},
+            "faces": {
+                "north": {"uv": [0, 0, 5.5, 3.5], "texture": "#1"},
+                "east": {"uv": [5.5, 0.5, 6, 4], "texture": "#1"},
+                "south": {"uv": [0, 3.5, 5.5, 7], "texture": "#1"},
+                "west": {"uv": [5.5, 6, 6, 9.5], "texture": "#1"},
+                "up": {"uv": [11, 6, 5.5, 5.5], "texture": "#1"},
+                "down": {"uv": [11, 0, 5.5, 0.5], "texture": "#1"}
+            }
+        },
+        {
+            "name": "stand",
+            "from": [5.5, -0.5, 7.5],
+            "to": [10.5, 1.5, 8],
+            "rotation": {"angle": 22.5, "axis": "x", "origin": [11.5, 1, 7.25]},
+            "faces": {
+                "north": {"uv": [0, 0, 5, 2], "texture": "#0"},
+                "east": {"uv": [5, 5, 6, 7], "texture": "#0"},
+                "south": {"uv": [0, 2, 5, 4], "texture": "#0"},
+                "west": {"uv": [5, 0, 6, 2], "texture": "#0"},
+                "up": {"uv": [5, 5, 0, 4], "texture": "#0"},
+                "down": {"uv": [5, 5, 0, 6], "texture": "#0"}
+            }
+        }
+    ],
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [0, -35, 0],
+            "translation": [-0.5, 7.75, 0.75]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [0, -35, 0],
+            "translation": [-0.5, 7.75, 0.75]
+        },
+        "firstperson_righthand": {
+            "rotation": [0, -40, 0],
+            "translation": [0, 6.5, 0]
+        },
+        "firstperson_lefthand": {
+            "rotation": [0, -40, 0],
+            "translation": [0, 6.25, 0]
+        },
+        "ground": {
+            "translation": [0, 4.5, 0]
+        },
+        "gui": {
+            "translation": [-0.25, 4.75, 0]
+        },
+        "fixed": {
+            "rotation": [-23, -180, 0],
+            "translation": [0.5, 3.75, -3.75]
+        }
+    },
+    "groups": [
+        {
+            "name": "block",
+            "origin": [8, 8, 8],
+            "children": [0, 1]
+        }
+    ]
+}

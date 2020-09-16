@@ -1,0 +1,14 @@
+{
+    "levels": {
+        "adelhyde": 4,
+        "powdered_delta": 0,
+        "bronson_extract": 0,
+        "flanergide": 6,
+        "karmotrine": 10
+    },
+    "isAged": false,
+    "isBlended": false,
+    "isOnTheRocks": true,
+    "outputItem": "va11halla_drinks:cobalt_velvet",
+    "type": "va11halla_drinks:drink"
+}

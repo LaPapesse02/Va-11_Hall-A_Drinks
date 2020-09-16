@@ -1,0 +1,14 @@
+{
+    "levels": {
+        "adelhyde": 8,
+        "powdered_delta": 0,
+        "bronson_extract": 0,
+        "flanergide": 2,
+        "karmotrine": -1
+    },
+    "isAged": true,
+    "isBlended": false,
+    "isOnTheRocks": false,
+    "outputItem": "va11halla_drinks:blue_fairy",
+    "type": "va11halla_drinks:drink"
+}

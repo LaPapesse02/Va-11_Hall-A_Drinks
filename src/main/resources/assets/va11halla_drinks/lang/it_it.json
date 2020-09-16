@@ -28,27 +28,10 @@
     "item.va11halla_drinks.flanergide": "Flanergide",
     "item.va11halla_drinks.karmotrine": "Karmotrine",
 
-    "item.va11halla_drinks.bad_touch": "Bad Touch",
-    "item.va11halla_drinks.beer": "Beer",
-    "item.va11halla_drinks.bleeding_jane": "Bleeding Jane",
-    "item.va11halla_drinks.bloom_light": "Bloom Light",
-    "item.va11halla_drinks.blue_fairy": "Blue Fairy",
-    "item.va11halla_drinks.brandtini": "Brandtini",
-    "item.va11halla_drinks.cobalt_velvet": "Cobalt Velvet",
-
 
     "tooltip.va11halla_drinks.base.adelhyde": "Adds sweetness",
     "tooltip.va11halla_drinks.base.powdered_delta": "Adds sourness",
     "tooltip.va11halla_drinks.base.bronson_extract": "Adds bitterness",
     "tooltip.va11halla_drinks.base.flanergide": "Adds spiciness",
-    "tooltip.va11halla_drinks.base.karmotrine": "Adds alcohol",
-
-    "tooltip.va11halla_drinks.drink.bad_touch": "We're nothing but mammals after all.",
-    "tooltip.va11halla_drinks.drink.beer": "Traditionally-brewed beer has become a luxury, but this one's pretty close to the real deal...",
-    "tooltip.va11halla_drinks.drink.bleeding_jane": "Say the name of this drink three times in front of a mirror and you'll look like a fool.",
-    "tooltip.va11halla_drinks.drink.bloom_light": "It's so unnecessarily brown...",
-    "tooltip.va11halla_drinks.drink.blue_fairy": "One of these will make all your teeth turn blue. Hope you brushed them well.",
-    "tooltip.va11halla_drinks.drink.brandtini": "8 out of 10 smug assholes would recommend it but they're too busy being smug assholes.",
-    "tooltip.va11halla_drinks.drink.cobalt_velvet": "It's like champaigne served on a cup that had a bit of cola left."
-
+    "tooltip.va11halla_drinks.base.karmotrine": "Adds alcohol"
 }
