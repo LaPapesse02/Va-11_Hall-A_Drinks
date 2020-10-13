@@ -25,7 +25,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldAccess;
 
 public class DrinkMakerEntity extends BlockEntity implements ImplementedInventory, SidedInventory, InventoryProvider, NamedScreenHandlerFactory {
-    DefaultedList<ItemStack> items = DefaultedList.ofSize(9, ItemStack.EMPTY);
+    private final DefaultedList<ItemStack> items = DefaultedList.ofSize(9, ItemStack.EMPTY);
 
     public DrinkMakerEntity() {
         super(RegisterBlocks.DRINK_MAKER_ENTITY_TYPE);
@@ -137,6 +137,10 @@ public class DrinkMakerEntity extends BlockEntity implements ImplementedInventor
 
     @Override
     public SidedInventory getInventory(BlockState state, WorldAccess world, BlockPos pos) {
+        return getInventory();
+    }
+
+    public SidedInventory getInventory() {
         return this;
     }
 

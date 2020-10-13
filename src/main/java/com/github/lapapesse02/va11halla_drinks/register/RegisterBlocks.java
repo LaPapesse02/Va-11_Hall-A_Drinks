@@ -4,6 +4,7 @@ import com.github.lapapesse02.va11halla_drinks.ModStarter;
 import com.github.lapapesse02.va11halla_drinks.block_entities.DrinkMakerEntity;
 import com.github.lapapesse02.va11halla_drinks.blocks.DrinkMaker;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
@@ -16,8 +17,8 @@ public class RegisterBlocks {
     public static BlockEntityType<DrinkMakerEntity> DRINK_MAKER_ENTITY_TYPE;
 
     static {
-        DRINK_MAKER = new DrinkMaker(FabricBlockSettings.of(Material.METAL));
-        DRINK_MAKER_ENTITY_TYPE = Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier("va11halla_drinks", "block_entity"), BlockEntityType.Builder.create(DrinkMakerEntity::new, DRINK_MAKER).build(null));
+        DRINK_MAKER = new DrinkMaker(FabricBlockSettings.of(Material.METAL).hardness(5F).breakByTool(FabricToolTags.PICKAXES, 2).breakByHand(false));
+        DRINK_MAKER_ENTITY_TYPE = Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(ModStarter.MOD_ID, "block_entity"), BlockEntityType.Builder.create(DrinkMakerEntity::new, DRINK_MAKER).build(null));
     }
 
     public static void register() {

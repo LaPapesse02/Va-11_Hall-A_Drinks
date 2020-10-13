@@ -55,9 +55,9 @@ public class DrinkMakerGuiDescription extends SyncedGuiDescription {
         WItem adelhydeImage = new WItem(new ItemStack(RegisterItems.ADELHYDE));
         root.add(adelhydeImage, 6, 1);
         WItem powderedDeltaImage = new WItem(new ItemStack(RegisterItems.POWDERED_DELTA));
-        root.add(powderedDeltaImage, 8, 1);
+        root.add(powderedDeltaImage, 10, 1);
         WItem bronsonExtractImage = new WItem(new ItemStack(RegisterItems.BRONSON_EXTRACT));
-        root.add(bronsonExtractImage, 10, 1);
+        root.add(bronsonExtractImage, 8, 1);
         WItem flanergideImage = new WItem(new ItemStack(RegisterItems.FLANERGIDE));
         root.add(flanergideImage, 6, 3);
         WItem karmotrineImage = new WItem(new ItemStack(RegisterItems.KARMOTRINE));
@@ -66,10 +66,10 @@ public class DrinkMakerGuiDescription extends SyncedGuiDescription {
         // slots
         WItemSlot adelhydeSlot = WItemSlot.of(blockInventory, 0).setFilter((stack) -> stack.getItem().equals(RegisterItems.ADELHYDE));
         root.add(adelhydeSlot, 6, 2);
-        WItemSlot powderedDeltaSlot = WItemSlot.of(blockInventory, 1).setFilter((stack) -> stack.getItem().equals(RegisterItems.POWDERED_DELTA));
-        root.add(powderedDeltaSlot, 8, 2);
-        WItemSlot bronsonExtractSlot = WItemSlot.of(blockInventory, 2).setFilter((stack) -> stack.getItem().equals(RegisterItems.BRONSON_EXTRACT));
-        root.add(bronsonExtractSlot, 10, 2);
+        WItemSlot bronsonExtractSlot = WItemSlot.of(blockInventory, 1).setFilter((stack) -> stack.getItem().equals(RegisterItems.BRONSON_EXTRACT));
+        root.add(bronsonExtractSlot, 8, 2);
+        WItemSlot powderedDeltaSlot = WItemSlot.of(blockInventory, 2).setFilter((stack) -> stack.getItem().equals(RegisterItems.POWDERED_DELTA));
+        root.add(powderedDeltaSlot, 10, 2);
         WItemSlot flanergideSlot = WItemSlot.of(blockInventory, 3).setFilter((stack) -> stack.getItem().equals(RegisterItems.FLANERGIDE));
         root.add(flanergideSlot, 6, 4);
         WItemSlot karmotrineSlot = WItemSlot.of(blockInventory, 4).setFilter((stack) -> stack.getItem().equals(RegisterItems.KARMOTRINE));
@@ -129,15 +129,18 @@ public class DrinkMakerGuiDescription extends SyncedGuiDescription {
             Optional<CustomRecipe> match = world.getRecipeManager()
                     .getFirstMatch(CustomRecipe.Type.INSTANCE, inventory, world);
 
-
+            ItemStack output;
             if (match.isPresent()) {
-                PacketByteBuf passedData = new PacketByteBuf(Unpooled.buffer());
-                passedData.writeItemStack(match.get().getOutput().copy());
-
-                ClientSidePacketRegistry.INSTANCE.sendToServer(RegisterMiscellaneous.DRINK_CRAFT_PACKET, passedData);
-
+                output = match.get().getOutput().copy();
+            } else {
+                output = new ItemStack(RegisterItems.FAILED_DRINK);
             }
+
+            PacketByteBuf passedData = new PacketByteBuf(Unpooled.buffer());
+            passedData.writeItemStack(output);
+
+            ClientSidePacketRegistry.INSTANCE.sendToServer(RegisterMiscellaneous.DRINK_CRAFT_PACKET, passedData);
+
         }
     }
-
 }

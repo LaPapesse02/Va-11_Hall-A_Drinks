@@ -16,34 +16,34 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class BaseDrinkItem extends Item {
     public static String[] ingredientNames = {
             "adelhyde",
-            "powdered_delta",
             "bronson_extract",
+            "powdered_delta",
             "flanergide",
             "karmotrine"
     };
     public static String[] colorCodes = {
             "§4", // dark red
-            "§9", // blue
             "§6", // gold
+            "§9", // blue
             "§2", // dark green
             "§3"  // dark aqua
     };
     public int[] ingredients;
+    public boolean isFailed;
     public boolean isBig;
     public String name;
-    public String type;
 
 
-    public BaseDrinkItem(Settings settings, int[] ingredients, String type, String name) {
+    public BaseDrinkItem(Settings settings, int[] ingredients, String name) {
         super(settings);
         this.ingredients = ingredients;
         this.name = name;
-        this.type = type;
         int sum = 0;
 
         /* in the game a drink is considered big if it has double the ingredients
@@ -53,6 +53,7 @@ public class BaseDrinkItem extends Item {
             sum += ingredient;
         }
         this.isBig = sum > 10;
+        this.isFailed = Arrays.equals(this.ingredients, new int[]{0, 0, 0, 0, 0});
     }
 
 
@@ -96,11 +97,7 @@ public class BaseDrinkItem extends Item {
                     // doesn't try to give an effect if the duration is 0
                     continue;
                 }
-                user.addStatusEffect(new StatusEffectInstance(
-                        IngredientsEffectConverter.getEffectFromIngredients(i, ingredients[i]),
-                        IngredientsEffectConverter.getDurationFromLevel(ingredients[i]),
-                        IngredientsEffectConverter.getEffectLevelFromLevel(ingredients[i])
-                ));
+                IngredientsEffectConverter.giveEffect(i, ingredients[i], this.isFailed, user);
             }
         }
         return stack;
@@ -158,12 +155,12 @@ public class BaseDrinkItem extends Item {
         // added text wrapping because minecraft bad and doesn't support \n
         // text wrap only works for languages that use spaces
 
-        String[] info = new TranslatableText(String.format("tooltip.va11halla_drinks.%s.%s", this.type, this.name)).getString().split(" ");
+        String[] info = new TranslatableText(String.format("tooltip.va11halla_drinks.info.%s", this.name)).getString().split(" ");
         String infoPart = "\"";
 
         for (int i = 0; i < info.length; i++) {
             infoPart = infoPart + info[i] + (i+1 != info.length ? " " : "\"");
-            if (infoPart.length() > 35 || i+1 == info.length) {
+            if (infoPart.length() > 30 || i+1 == info.length) {
                 tooltip.add(new LiteralText("§7§o" + infoPart));
                 infoPart = "";
             }

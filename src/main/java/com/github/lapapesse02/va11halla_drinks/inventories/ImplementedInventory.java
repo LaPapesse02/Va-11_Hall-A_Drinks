@@ -116,6 +116,18 @@ public interface ImplementedInventory extends Inventory {
     }
 
     /**
+     * Returns the maximum number of items a stack can contain when placed inside this inventory.
+     * No slots may have more than this number of items. It is effectively the
+     * stacking limit for this inventory's slots.
+     *
+     * @return the max {@link ItemStack#getCount() count} of item stacks in this inventory
+     */
+    @Override
+    default int getMaxCountPerStack() {
+        return 20;
+    }
+
+    /**
      * @return true if the player can use the inventory, false otherwise.
      */
     @Override

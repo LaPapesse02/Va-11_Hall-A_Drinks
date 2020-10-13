@@ -33,12 +33,12 @@ public class RegisterMiscellaneous {
 
                     // ingredients
                     stacks.add(new ItemStack(RegisterItems.ADELHYDE));
-                    stacks.add(new ItemStack(RegisterItems.POWDERED_DELTA));
                     stacks.add(new ItemStack(RegisterItems.BRONSON_EXTRACT));
+                    stacks.add(new ItemStack(RegisterItems.POWDERED_DELTA));
                     stacks.add(new ItemStack(RegisterItems.FLANERGIDE));
                     stacks.add(new ItemStack(RegisterItems.KARMOTRINE));
 
-                    // drinks
+                    // craftable drinks
                     stacks.add(new ItemStack(RegisterItems.BAD_TOUCH));
                     stacks.add(new ItemStack(RegisterItems.BEER));
                     stacks.add(new ItemStack(RegisterItems.BLEEDING_JANE));
@@ -46,6 +46,25 @@ public class RegisterMiscellaneous {
                     stacks.add(new ItemStack(RegisterItems.BLUE_FAIRY));
                     stacks.add(new ItemStack(RegisterItems.BRANDTINI));
                     stacks.add(new ItemStack(RegisterItems.COBALT_VELVET));
+                    stacks.add(new ItemStack(RegisterItems.CREVICE_SPIKE));
+                    stacks.add(new ItemStack(RegisterItems.FLUFFY_DREAM));
+                    stacks.add(new ItemStack(RegisterItems.FRINGE_WEAVER));
+                    stacks.add(new ItemStack(RegisterItems.FROTHY_WATER));
+                    stacks.add(new ItemStack(RegisterItems.GRIZZLY_TEMPLE));
+                    stacks.add(new ItemStack(RegisterItems.GUT_PUNCH));
+                    stacks.add(new ItemStack(RegisterItems.MARSBLAST));
+                    stacks.add(new ItemStack(RegisterItems.MERCURYBLAST));
+                    stacks.add(new ItemStack(RegisterItems.MOONBLAST));
+                    stacks.add(new ItemStack(RegisterItems.PIANO_MAN));
+                    stacks.add(new ItemStack(RegisterItems.PIANO_WOMAN));
+                    stacks.add(new ItemStack(RegisterItems.PILE_DRIVER));
+                    stacks.add(new ItemStack(RegisterItems.SPARKLE_STAR));
+                    stacks.add(new ItemStack(RegisterItems.SUGAR_RUSH));
+                    stacks.add(new ItemStack(RegisterItems.SUNSHINE_CLOUD));
+                    stacks.add(new ItemStack(RegisterItems.SUPLEX));
+                    stacks.add(new ItemStack(RegisterItems.ZEN_STAR));
+
+                    stacks.add(new ItemStack(RegisterItems.FAILED_DRINK));
                 })
                 .build();
 
@@ -80,14 +99,19 @@ public class RegisterMiscellaneous {
                     // removes every item and places the result in the last slot
                     screenHandler.setStackInSlot(i, i == 5 ? item : ItemStack.EMPTY);
                 }
-                screenHandler.getStacks().get(5).setTag(tag);
-
 
                 int[] ingredientsShortened = Arrays.copyOf(((BaseDrinkItem) screenHandler.getStacks().get(5).getItem()).ingredients, 4);
                 int[] newIngredientsShortened = Arrays.copyOf(tag.getIntArray("ingredients"), 4);
                 // removes karmotrine so that drinks with optional karmotrine are not
                 // automatically considered big
-                tag.putBoolean("isBig", !Arrays.equals(ingredientsShortened, newIngredientsShortened));
+                // also failed drinks are always considered regular sized
+                tag.putBoolean(
+                        "isBig",
+                        !Arrays.equals(ingredientsShortened, newIngredientsShortened)
+                                && !screenHandler.getStacks().get(5).isItemEqual(new ItemStack(RegisterItems.FAILED_DRINK))
+                        );
+
+                screenHandler.getStacks().get(5).setTag(tag);
             });
         }));
     }

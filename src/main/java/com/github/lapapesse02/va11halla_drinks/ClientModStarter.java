@@ -11,8 +11,10 @@ import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 public class ClientModStarter implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+    
         ModelLoadingRegistry.INSTANCE.registerResourceProvider(rm -> new ResourceProvider());
 
         ScreenRegistry.<DrinkMakerGuiDescription, DrinkMakerScreen>register(RegisterMiscellaneous.SCREEN_HANDLER_TYPE, (gui, inventory, title) -> new DrinkMakerScreen(gui, inventory.player, title));
+        
     }
 }

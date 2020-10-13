@@ -5,11 +5,13 @@ import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -44,6 +46,15 @@ public class DrinkMaker extends Block implements BlockEntityProvider {
             default:
                 return VoxelShapes.fullCube();
         }
+    }
+
+    @Override
+    public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, BlockEntity blockEntity, ItemStack stack) {
+        if (blockEntity instanceof DrinkMakerEntity){
+            DrinkMakerEntity entity = (DrinkMakerEntity) blockEntity;
+            ItemScatterer.spawn(world, pos, entity.getItems());
+        }
+        super.afterBreak(world, player, pos, state, blockEntity, stack);
     }
 
     public BlockState getPlacementState(ItemPlacementContext ctx) {

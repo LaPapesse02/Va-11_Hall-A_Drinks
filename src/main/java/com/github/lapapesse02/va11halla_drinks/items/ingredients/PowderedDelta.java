@@ -5,6 +5,6 @@ import com.github.lapapesse02.va11halla_drinks.items.BaseDrinkItem;
 public class PowderedDelta extends BaseDrinkItem {
 
     public PowderedDelta (Settings settings) {
-        super(settings, new int[] {0, 1, 0, 0, 0}, "base", "powdered_delta");
+        super(settings, new int[] {0, 0, 1, 0, 0}, "powdered_delta");
     }
 }
