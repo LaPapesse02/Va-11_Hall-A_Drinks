@@ -1,0 +1,14 @@
+{
+    "levels": {
+        "adelhyde": 0,
+        "bronson_extract": 6,
+        "powdered_delta": 1,
+        "flanergide": 4,
+        "karmotrine": 2
+    },
+    "isAged": false,
+    "isBlended": true,
+    "isOnTheRocks": false,
+    "outputItem": "va11halla_drinks:marsblast",
+    "type": "va11halla_drinks:drink"
+}

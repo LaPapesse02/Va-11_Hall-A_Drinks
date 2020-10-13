@@ -1,0 +1,14 @@
+{
+    "levels": {
+        "adelhyde": 1,
+        "bronson_extract": 1,
+        "powdered_delta": 1,
+        "flanergide": 1,
+        "karmotrine": 0
+    },
+    "isAged": true,
+    "isBlended": false,
+    "isOnTheRocks": false,
+    "outputItem": "va11halla_drinks:frothy_water",
+    "type": "va11halla_drinks:drink"
+}

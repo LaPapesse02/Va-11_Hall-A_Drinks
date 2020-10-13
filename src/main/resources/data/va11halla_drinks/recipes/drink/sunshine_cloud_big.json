@@ -1,0 +1,14 @@
+{
+    "levels": {
+        "adelhyde": 4,
+        "bronson_extract": 4,
+        "powdered_delta": 0,
+        "flanergide": 0,
+        "karmotrine": -1
+    },
+    "isAged": false,
+    "isBlended": true,
+    "isOnTheRocks": true,
+    "outputItem": "va11halla_drinks:sunshine_cloud",
+    "type": "va11halla_drinks:drink"
+}

@@ -1,0 +1,14 @@
+{
+    "levels": {
+        "adelhyde": 1,
+        "bronson_extract": 1,
+        "powdered_delta": 3,
+        "flanergide": 3,
+        "karmotrine": 2
+    },
+    "isAged": false,
+    "isBlended": true,
+    "isOnTheRocks": true,
+    "outputItem": "va11halla_drinks:mercuryblast",
+    "type": "va11halla_drinks:drink"
+}

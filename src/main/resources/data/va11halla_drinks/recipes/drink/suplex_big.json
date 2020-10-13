@@ -1,0 +1,14 @@
+{
+    "levels": {
+        "adelhyde": 0,
+        "bronson_extract": 8,
+        "powdered_delta": 0,
+        "flanergide": 6,
+        "karmotrine": 6
+    },
+    "isAged": false,
+    "isBlended": false,
+    "isOnTheRocks": true,
+    "outputItem": "va11halla_drinks:suplex",
+    "type": "va11halla_drinks:drink"
+}

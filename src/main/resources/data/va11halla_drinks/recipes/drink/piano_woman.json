@@ -1,0 +1,14 @@
+{
+    "levels": {
+        "adelhyde": 5,
+        "bronson_extract": 5,
+        "powdered_delta": 2,
+        "flanergide": 3,
+        "karmotrine": 3
+    },
+    "isAged": true,
+    "isBlended": false,
+    "isOnTheRocks": false,
+    "outputItem": "va11halla_drinks:piano_woman",
+    "type": "va11halla_drinks:drink"
+}

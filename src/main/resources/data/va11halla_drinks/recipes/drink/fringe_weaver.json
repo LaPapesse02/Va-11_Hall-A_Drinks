@@ -1,0 +1,14 @@
+{
+    "levels": {
+        "adelhyde": 1,
+        "bronson_extract": 0,
+        "powdered_delta": 0,
+        "flanergide": 0,
+        "karmotrine": 9
+    },
+    "isAged": true,
+    "isBlended": false,
+    "isOnTheRocks": false,
+    "outputItem": "va11halla_drinks:fringe_weaver",
+    "type": "va11halla_drinks:drink"
+}

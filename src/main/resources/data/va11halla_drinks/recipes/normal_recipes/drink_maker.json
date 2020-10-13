@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iii",
+    "iGV",
+    "iii"
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "G": {
+      "item": "minecraft:glass_pane"
+    },
+    "V": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "va11halla_drinks:drink_maker",
+    "count": 1
+  },
+  "group": "va11halla_drink_maker"
+}

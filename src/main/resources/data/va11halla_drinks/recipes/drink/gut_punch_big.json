@@ -1,0 +1,14 @@
+{
+    "levels": {
+        "adelhyde": 0,
+        "bronson_extract": 10,
+        "powdered_delta": 0,
+        "flanergide": 2,
+        "karmotrine": -1
+    },
+    "isAged": true,
+    "isBlended": false,
+    "isOnTheRocks": false,
+    "outputItem": "va11halla_drinks:gut_punch",
+    "type": "va11halla_drinks:drink"
+}

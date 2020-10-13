@@ -1,0 +1,14 @@
+{
+    "levels": {
+        "adelhyde": 6,
+        "bronson_extract": 0,
+        "powdered_delta": 6,
+        "flanergide": 0,
+        "karmotrine": -1
+    },
+    "isAged": true,
+    "isBlended": false,
+    "isOnTheRocks": false,
+    "outputItem": "va11halla_drinks:fluffy_dream",
+    "type": "va11halla_drinks:drink"
+}

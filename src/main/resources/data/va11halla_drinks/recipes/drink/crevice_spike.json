@@ -1,0 +1,14 @@
+{
+    "levels": {
+        "adelhyde": 0,
+        "bronson_extract": 0,
+        "powdered_delta": 2,
+        "flanergide": 4,
+        "karmotrine": -1
+    },
+    "isAged": false,
+    "isBlended": true,
+    "isOnTheRocks": false,
+    "outputItem": "va11halla_drinks:crevice_spike",
+    "type": "va11halla_drinks:drink"
+}

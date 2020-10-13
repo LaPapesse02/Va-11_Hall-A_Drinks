@@ -1,0 +1,14 @@
+{
+    "levels": {
+        "adelhyde": 2,
+        "bronson_extract": 3,
+        "powdered_delta": 5,
+        "flanergide": 5,
+        "karmotrine": 3
+    },
+    "isAged": false,
+    "isBlended": false,
+    "isOnTheRocks": true,
+    "outputItem": "va11halla_drinks:piano_man",
+    "type": "va11halla_drinks:drink"
+}

@@ -1,0 +1,14 @@
+{
+    "levels": {
+        "adelhyde": 2,
+        "bronson_extract": 4,
+        "powdered_delta": 2,
+        "flanergide": 4,
+        "karmotrine": 8
+    },
+    "isAged": false,
+    "isBlended": false,
+    "isOnTheRocks": false,
+    "outputItem": "va11halla_drinks:beer",
+    "type": "va11halla_drinks:drink"
+}

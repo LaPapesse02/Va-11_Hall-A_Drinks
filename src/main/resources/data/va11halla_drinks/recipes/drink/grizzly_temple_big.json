@@ -1,0 +1,14 @@
+{
+    "levels": {
+        "adelhyde": 6,
+        "bronson_extract": 6,
+        "powdered_delta": 6,
+        "flanergide": 0,
+        "karmotrine": 2
+    },
+    "isAged": false,
+    "isBlended": true,
+    "isOnTheRocks": false,
+    "outputItem": "va11halla_drinks:grizzly_temple",
+    "type": "va11halla_drinks:drink"
+}
