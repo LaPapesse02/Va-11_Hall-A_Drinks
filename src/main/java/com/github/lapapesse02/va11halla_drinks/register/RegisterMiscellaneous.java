@@ -31,6 +31,9 @@ public class RegisterMiscellaneous {
                     // blocks
                     stacks.add(new ItemStack(RegisterBlocks.DRINK_MAKER));
 
+                    // recipe book
+                    stacks.add(new ItemStack(RegisterItems.RECIPE_BOOK));
+
                     // ingredients
                     stacks.add(new ItemStack(RegisterItems.ADELHYDE));
                     stacks.add(new ItemStack(RegisterItems.BRONSON_EXTRACT));
@@ -47,6 +50,7 @@ public class RegisterMiscellaneous {
                     stacks.add(new ItemStack(RegisterItems.BRANDTINI));
                     stacks.add(new ItemStack(RegisterItems.COBALT_VELVET));
                     stacks.add(new ItemStack(RegisterItems.CREVICE_SPIKE));
+                    stacks.add(new ItemStack(RegisterItems.FLAMING_MOAI));
                     stacks.add(new ItemStack(RegisterItems.FLUFFY_DREAM));
                     stacks.add(new ItemStack(RegisterItems.FRINGE_WEAVER));
                     stacks.add(new ItemStack(RegisterItems.FROTHY_WATER));

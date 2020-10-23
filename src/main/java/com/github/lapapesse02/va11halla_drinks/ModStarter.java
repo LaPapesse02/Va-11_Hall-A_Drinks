@@ -4,6 +4,7 @@ import com.github.lapapesse02.va11halla_drinks.register.RegisterBlocks;
 import com.github.lapapesse02.va11halla_drinks.register.RegisterItems;
 import com.github.lapapesse02.va11halla_drinks.register.RegisterMiscellaneous;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.client.render.entity.feature.ArmorFeatureRenderer;
 
 
 public class ModStarter implements ModInitializer {

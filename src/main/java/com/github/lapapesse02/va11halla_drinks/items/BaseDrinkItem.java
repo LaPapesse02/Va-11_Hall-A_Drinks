@@ -2,7 +2,6 @@ package com.github.lapapesse02.va11halla_drinks.items;
 
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -37,13 +36,32 @@ public class BaseDrinkItem extends Item {
     public int[] ingredients;
     public boolean isFailed;
     public boolean isBig;
+    public String[] tags;
     public String name;
 
+
+    public BaseDrinkItem(Settings settings, int[] ingredients, String name, String[] tags) {
+        super(settings);
+        this.ingredients = ingredients;
+        this.name = name;
+        this.tags = tags;
+        int sum = 0;
+
+        /* in the game a drink is considered big if it has double the ingredients
+         * it normally requires or if the base drink has more than 10 ingredients
+         */
+        for (int ingredient : this.ingredients) {
+            sum += ingredient;
+        }
+        this.isBig = sum > 10;
+        this.isFailed = Arrays.equals(this.ingredients, new int[]{0, 0, 0, 0, 0});
+    }
 
     public BaseDrinkItem(Settings settings, int[] ingredients, String name) {
         super(settings);
         this.ingredients = ingredients;
         this.name = name;
+        this.tags = new String[] {};
         int sum = 0;
 
         /* in the game a drink is considered big if it has double the ingredients
@@ -164,6 +182,16 @@ public class BaseDrinkItem extends Item {
                 tooltip.add(new LiteralText("§7§o" + infoPart));
                 infoPart = "";
             }
+        }
+
+        // tags of the item, such as type or flavor of the drink
+        if (this.tags.length > 0) {
+            String tag = "§8";
+            for (int i = 0; i < this.tags.length; i++) {
+                tag += new TranslatableText("tags.va11halla_drinks." + this.tags[i]).getString() + (i+1 < this.tags.length ? ", " : "");
+            }
+            tooltip.add(new LiteralText(""));
+            tooltip.add(new LiteralText(tag));
         }
 
         tooltip.add(new LiteralText(""));

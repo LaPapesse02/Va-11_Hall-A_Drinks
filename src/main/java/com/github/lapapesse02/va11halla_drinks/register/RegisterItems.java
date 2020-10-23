@@ -4,6 +4,7 @@ import com.github.lapapesse02.va11halla_drinks.ModStarter;
 import com.github.lapapesse02.va11halla_drinks.items.drinks.*;
 import com.github.lapapesse02.va11halla_drinks.items.ingredients.*;
 
+import com.github.lapapesse02.va11halla_drinks.items.miscellaneous.RecipeBook;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -24,6 +25,7 @@ public class RegisterItems {
     public static final Brandtini BRANDTINI;
     public static final CobaltVelvet COBALT_VELVET;
     public static final CreviceSpike CREVICE_SPIKE;
+    public static final FlamingMoai FLAMING_MOAI;
     public static final FluffyDream FLUFFY_DREAM;
     public static final FringeWeaver FRINGE_WEAVER;
     public static final FrothyWater FROTHY_WATER;
@@ -43,6 +45,9 @@ public class RegisterItems {
 
     public static final FailedDrink FAILED_DRINK;
 
+    // recipe book
+    public static final RecipeBook RECIPE_BOOK;
+
 
     static {
         // ingredients
@@ -61,6 +66,7 @@ public class RegisterItems {
         BRANDTINI = new Brandtini(new Brandtini.Settings().group(RegisterMiscellaneous.MOD_GROUP).maxCount(1));
         COBALT_VELVET = new CobaltVelvet(new CobaltVelvet.Settings().group(RegisterMiscellaneous.MOD_GROUP).maxCount(1));
         CREVICE_SPIKE = new CreviceSpike(new CreviceSpike.Settings().group(RegisterMiscellaneous.MOD_GROUP).maxCount(1));
+        FLAMING_MOAI = new FlamingMoai(new FlamingMoai.Settings().group(RegisterMiscellaneous.MOD_GROUP).maxCount(1));
         FLUFFY_DREAM = new FluffyDream(new FluffyDream.Settings().group(RegisterMiscellaneous.MOD_GROUP).maxCount(1));
         FRINGE_WEAVER = new FringeWeaver(new FringeWeaver.Settings().group(RegisterMiscellaneous.MOD_GROUP).maxCount(1));
         FROTHY_WATER = new FrothyWater(new FrothyWater.Settings().group(RegisterMiscellaneous.MOD_GROUP).maxCount(1));
@@ -79,6 +85,9 @@ public class RegisterItems {
         ZEN_STAR = new ZenStar(new ZenStar.Settings().group(RegisterMiscellaneous.MOD_GROUP).maxCount(1));
 
         FAILED_DRINK = new FailedDrink(new FailedDrink.Settings().group(RegisterMiscellaneous.MOD_GROUP).maxCount(1));
+
+        // recipe book
+        RECIPE_BOOK = new RecipeBook(new RecipeBook.Settings().group(RegisterMiscellaneous.MOD_GROUP));
     }
 
 
@@ -99,6 +108,7 @@ public class RegisterItems {
         Registry.register(Registry.ITEM, new Identifier(ModStarter.MOD_ID, "brandtini"), BRANDTINI);
         Registry.register(Registry.ITEM, new Identifier(ModStarter.MOD_ID, "cobalt_velvet"), COBALT_VELVET);
         Registry.register(Registry.ITEM, new Identifier(ModStarter.MOD_ID, "crevice_spike"), CREVICE_SPIKE);
+        Registry.register(Registry.ITEM, new Identifier(ModStarter.MOD_ID, "flaming_moai"), FLAMING_MOAI);
         Registry.register(Registry.ITEM, new Identifier(ModStarter.MOD_ID, "fluffy_dream"), FLUFFY_DREAM);
         Registry.register(Registry.ITEM, new Identifier(ModStarter.MOD_ID, "fringe_weaver"), FRINGE_WEAVER);
         Registry.register(Registry.ITEM, new Identifier(ModStarter.MOD_ID, "frothy_water"), FROTHY_WATER);
@@ -117,5 +127,8 @@ public class RegisterItems {
         Registry.register(Registry.ITEM, new Identifier(ModStarter.MOD_ID, "zen_star"), ZEN_STAR);
 
         Registry.register(Registry.ITEM, new Identifier(ModStarter.MOD_ID, "failed_drink"), FAILED_DRINK);
+
+        // recipe book
+        Registry.register(Registry.ITEM, new Identifier(ModStarter.MOD_ID, "recipe_book"), RECIPE_BOOK);
     }
 }
