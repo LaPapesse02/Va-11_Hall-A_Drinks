@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:book"
+        },
+        {
+            "item": "va11halla_drinks:adelhyde"
+        },
+        {
+            "item": "minecraft:black_dye"
+        }
+    ],
+    "result": {
+        "item": "va11halla_drinks:recipe_book",
+        "count": 1
+    },
+    "group": "drink_book"
+}

@@ -1,0 +1,14 @@
+{
+  "levels": {
+    "adelhyde": 1,
+    "bronson_extract": 1,
+    "powdered_delta": 2,
+    "flanergide": 3,
+    "karmotrine": 5
+  },
+  "isAged": false,
+  "isBlended": false,
+  "isOnTheRocks": false,
+  "outputItem": "va11halla_drinks:flaming_moai",
+  "type": "va11halla_drinks:drink"
+}
